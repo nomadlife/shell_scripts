@@ -1,0 +1,25 @@
+#!/bin/bash
+echo "common run"
+while [ -n "$1" ]; do
+	case "$1" in
+	w1) 
+		echo "wiki1 server run"
+		if [ "$2" == "b" ]
+		then
+			echo "$2 input"
+		else
+			echo "no second option"
+		fi
+		;;
+	w2)
+		echo "wiki2 server run"
+		if [ "$2" == "b" ]
+		then
+			echo "$2 input"
+		else
+			echo "no second option"
+		fi
+		;;
+esac
+shift
+done

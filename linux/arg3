@@ -1,0 +1,44 @@
+#!/bin/sh
+if [ $# -eq 0 ]
+then
+        echo "Missing options!"
+        echo "$0 -h for help"
+        echo ""
+        exit 0
+fi
+
+ECHO="false"
+
+while getopts "he" OPTION; do
+        case $OPTION in
+                prompt)
+			echo "prompt"
+                        ECHO="true"
+                        ;;
+                wiki1)
+			echo "wiki1"
+                        ECHO="true"
+                        ;;
+		wiki2)
+			echo "wiki2"
+                        ECHO="true"
+                        ;;
+
+                h)
+                        echo "Usage:"
+			echo "args.sh [-option]"
+                        echo ""
+			echo "  [-options]"
+                        echo "   -prompt    run prompt"
+			echo "   -wiki1     first wiki based on blog"
+                        echo "   -wiki2     second wiki based on django-wiki"
+                        exit 0
+                        ;;
+
+        esac
+done
+
+if [ $ECHO = "true" ]
+then
+        echo "Hello world";
+fi

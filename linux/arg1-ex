@@ -1,0 +1,13 @@
+#!/bin/sh
+echo "1st: $1"
+echo "2nd: $2"
+echo "# of arg: $#"
+echo "source activate dj21py"
+
+while [ -n "$1" ]; do
+  case "$1" in
+  w1) echo "cd ~/Documents/";;
+  w2) echo "option b";;
+esac
+shift
+done

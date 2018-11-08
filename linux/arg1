@@ -1,0 +1,32 @@
+#!/bin/sh
+source activate dj21py
+while [ -n "$1" ]; do
+	case "$1" in
+	wiki1) 
+	cd ~/Documents/wiki_page
+	if [ "$2" == "-b" ];then
+		sleep 1 && firefox localhost:8000 &
+		python manage.py runserver
+		source deactivate
+	else
+		python manage.py runserver
+		source deactivate
+	fi
+	;;
+	wiki2)
+	cd ~/Documents/testproject
+	if [ "$2" == "-b" ];then
+		sleep 1 && firefox localhost:8000 &
+		python manage.py runserver
+		source deactivate
+	else
+		python manage.py runserver
+		source deactivate
+	fi
+	;;
+	*)
+	echo "source"
+	;;
+esac
+shift
+done
