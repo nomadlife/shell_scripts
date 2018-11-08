@@ -1,0 +1,5 @@
+source activate dj21py
+cd ~/Documents/testproject
+sleep 1 && firefox localhost:8000 &
+python manage.py runserver
+source deactivate

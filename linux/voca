@@ -1,0 +1,3 @@
+cd Documents/vocabulary-nodejs
+sleep 1 && firefox localhost:3000 &
+nodemon main.js
