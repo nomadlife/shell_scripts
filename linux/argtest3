@@ -1,3 +1,4 @@
+#!/bin/sh
 usage() { echo "Usage: $0 [-s <45|90>] [-p <string>]" 1>&2; exit 1; }
 
 while getopts ":s:p:" o; do
